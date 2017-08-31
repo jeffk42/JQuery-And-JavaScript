@@ -14,12 +14,33 @@ function noWrapper(e) {
 }
 
 function moveWrapper(e) {
-	var tracker = document.getElementById("tracker");
+	var tracker = document.getElementById("trackercoords");
 	tracker.innerHTML = e.screenX + "," + e.screenY;
 }
 
+function moveInButton(e) {
+	var msg = "";
+	if (e.currentTarget.id == "div1")
+		msg = "yes";
+	else
+		msg = "no";
+	var trackerloc = document.getElementById("trackerloc");
+	trackerloc.innerHTML = " (" + msg + " button)";
+}
+
+function moveOutButton(e) {
+	var trackerloc = document.getElementById("trackerloc");
+	trackerloc.innerHTML = "";
+}
+
 function onloadHandler() {
-	document.getElementById("div1").addEventListener('click', yesWrapper, false);
-	document.getElementById("div2").addEventListener('click', noWrapper, false);
+	var div1 = document.getElementById("div1");
+	var div2 = document.getElementById("div2");
+	div1.addEventListener('click', yesWrapper, false);
+	div1.addEventListener('mouseenter', moveInButton, false);
+	div1.addEventListener('mouseleave', moveOutButton, false);
+	div2.addEventListener('click', noWrapper, false);
+	div2.addEventListener('mouseenter', moveInButton, false);
+	div2.addEventListener('mouseleave', moveOutButton, false);
 	document.addEventListener('mousemove', moveWrapper, false);
 }

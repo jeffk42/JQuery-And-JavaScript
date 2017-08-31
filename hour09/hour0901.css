@@ -8,6 +8,10 @@ div {
 	cursor: pointer;
 }
 
-div#tracker {
+span#trackercoords {
 	color:#cc0000;
+}
+
+span#trackerloc {
+	color:#0000cc;
 }
