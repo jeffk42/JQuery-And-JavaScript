@@ -65,6 +65,7 @@ function tile() {
 }
 
 function flip() {
+	var prevTop = topIndex;
 	
 	if (topIndex >= $(".photo").length-1) {
 		topIndex = 0;
