@@ -1,0 +1,11 @@
+div {
+	padding: 15px;
+}
+
+span {
+	background-color: black;
+	color: #00FF00;
+	font: 30px arial;
+	padding: 5px;
+	border: 5px groove;
+}
