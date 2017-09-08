@@ -1,0 +1,15 @@
+img {
+	display: inline-block;
+	width: 300px;
+	height: .1px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+
+p, span {
+	display: inline-block;
+	width: 300px;
+	background-color: black;
+	color: white;
+}
